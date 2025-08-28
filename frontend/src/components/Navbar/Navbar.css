@@ -1,12 +1,15 @@
 .navbar{
+    
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    background-color: hsl(0, 0%, 20%);
 }
-.navbar.logo{
-    width: 150px;
+.navbar .logo{
+    width: 250px ;
+    border-radius: 10%;
+   
 }
 .navbar-menu{
     display: flex;

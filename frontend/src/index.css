@@ -53,6 +53,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
 *{
   margin: 0;
   padding: 0;
@@ -64,12 +65,13 @@ body{
   min-height: 100vh;
 
 }
+
 a{
   text-decoration: none;
   color: inherit;
 }
 .App{
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 

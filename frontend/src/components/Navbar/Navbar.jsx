@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import  './Navbar.css'
+import '../../index.css'
 import {assets} from '../../assets/assets'
 import { useState } from 'react'
 import { Link, useNavigate,  } from 'react-router-dom'
 import { StoreContext } from '../../Context/StoreContext'
+import logo2 from '../../assets/logo2.png'
 import  axios  from 'axios'
-
 const Navbar = ({setShowLogin}) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount, token, setToken,url,setFoodList } = useContext(StoreContext);
@@ -16,33 +17,33 @@ const Navbar = ({setShowLogin}) => {
     navigate("/");
   };
  
-  // search part
+  // // search part
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(url + "/api/food/search", {
-        query: searchTerm,
-      });
-      console.log(response.data);
+    // try {
+    //   const response = await axios.post(url + "/api/food/search", {
+    //     query: searchTerm,
+    //   });
+    //   console.log(response.data);
 
-      if (response.data.success) {
-        setFoodList(response.data.data);
-      }
-      const food = response.data.data.length
-      if (food == []) {
-           alert("Your Food is Not found ");
-      } 
-      console.log(searchTerm);
-    } catch (error) {
+    //   if (response.data.success) {
+    //     setFoodList(response.data.data);
+    //   }
+    //   const food = response.data.data.length
+    //   if (food == []) {
+    //        alert("Your Food is Not found ");
+    //   } 
+    //   console.log(searchTerm);
+    // } catch (error) {
       
-      console.error("Error during search:", error);
-    }
+    //   console.error("Error during search:", error);
+    // }
   };
   return (
     <div className="navbar">
       <Link to="/">
-        <img src={assets.logo} className="logo" />
+        <img src={logo2} className="logo" />
       </Link>
       <ul className="navbar-menu">
         <Link

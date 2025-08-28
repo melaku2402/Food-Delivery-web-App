@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/myorders" element={<MyOrder />} />
         </Routes>
       </div>
+      
       <Footer />
     </>
   );
