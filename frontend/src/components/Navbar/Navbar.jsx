@@ -5,7 +5,6 @@ import {assets} from '../../assets/assets'
 import { useState } from 'react'
 import { Link, useNavigate,  } from 'react-router-dom'
 import { StoreContext } from '../../Context/StoreContext'
-import logo2 from '../../assets/logo2.png'
 import  axios  from 'axios'
 const Navbar = ({setShowLogin}) => {
   const [menu, setMenu] = useState("home");
@@ -21,24 +20,7 @@ const Navbar = ({setShowLogin}) => {
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = async (e) => {
     e.preventDefault();
-    // try {
-    //   const response = await axios.post(url + "/api/food/search", {
-    //     query: searchTerm,
-    //   });
-    //   console.log(response.data);
-
-    //   if (response.data.success) {
-    //     setFoodList(response.data.data);
-    //   }
-    //   const food = response.data.data.length
-    //   if (food == []) {
-    //        alert("Your Food is Not found ");
-    //   } 
-    //   console.log(searchTerm);
-    // } catch (error) {
-      
-    //   console.error("Error during search:", error);
-    // }
+   
   };
   return (
     <div className="navbar">
@@ -84,7 +66,7 @@ const Navbar = ({setShowLogin}) => {
         </a>
       </ul>
       <div className="navbar-right">
-        {/* <img onClick({<Search />} ) src={assets.search_icon} alt="" /> */}
+        <img  src={assets.search_icon} alt="" /> 
 
      
          <form onSubmit={handleSearch}>
